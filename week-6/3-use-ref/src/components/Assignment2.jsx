@@ -5,13 +5,14 @@ import { useRef } from "react";
 
 export function Assignment2() {
   const [, forceRender] = useState(0);
-  const count = useRef(1);
+  const count = useRef(0);
 
   const handleReRender = () => {
     // Update state to force re-render
-    count.current++;
+
     forceRender(Math.random());
   };
+  count.current++;
 
   return (
     <div>

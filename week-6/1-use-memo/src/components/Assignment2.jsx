@@ -24,7 +24,7 @@ export function Assignment2() {
   const filteredSentences = useMemo(() => {
     if (filter === "") return sentences;
     return sentences.filter((x) => x.includes(filter));
-  }, [filter]);
+  }, [filter, sentences]);
 
   return (
     <div>
